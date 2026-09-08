@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.dataset.theme=localStorage.getItem('adamx-theme')||'light';</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,7 +23,12 @@
       <a href="#method">Method</a>
       <a href="#about">About</a>
     </nav>
-    <a class="header-link" href="https://github.com/AdamX-Labs" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Dark</span>
+      </button>
+      <a class="header-link" href="https://github.com/AdamX-Labs" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+    </div>
   </header>
 
   <main id="main">
