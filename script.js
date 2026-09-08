@@ -32,7 +32,8 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.project-card, .mini-card, .steps article').forEach((item) => {
+document.querySelectorAll('.section-heading, .method-intro, .manifesto-copy, .project-card, .mini-card, .steps article').forEach((item, index) => {
   item.classList.add('reveal');
+  item.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 80}ms`);
   observer.observe(item);
 });
